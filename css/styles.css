@@ -1,0 +1,370 @@
+/*
+ * Tooltip.js
+ * Copyright (c) 2015 Matthias Schuetz
+ */
+
+html, body {
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	font-family:"Roboto Slab", sans-serif;
+	font-weight:300;
+	font-size:18px;
+	line-height:1;
+}
+
+body {
+	background:#ffffff;
+	color:#000000;
+}
+
+::selection {
+	background:#a11147;
+	color:#ffffff;
+}
+
+::-moz-selection {
+	background:#a11147;
+	color:#ffffff;
+}
+
+div, p, h1, h2, h3, h4, h5, h6, ul, ol, li {
+	margin:0;
+	padding:0;
+	font-weight:300;
+}
+
+h1 {
+	font-size:80px;
+	font-weight:700;
+}
+
+h2 {
+	font-size:22px;
+	line-height:40px;
+}
+
+h3 {
+	font-size:22px;
+}
+
+h4 {
+	font-size:18px;
+}
+
+a {
+	color:#a11147;
+	line-height:1.2;
+	text-decoration:none;
+	outline:none;
+	display:inline-block;
+	transition:all 150ms;
+	-webkit-transition:all 150ms;
+}
+
+a:hover {
+	background:#a11147;
+	color:white;
+}
+
+a.no-hover:hover {
+	background:transparent;
+}
+
+p {
+	line-height:28px;
+}
+
+p:not(:last-child) {
+	margin-bottom:20px;
+}
+
+ul.list {
+	padding:0 40px 20px 20px;
+	list-style-type:square;
+}
+
+ul.list li {
+	line-height:28px;
+}
+
+.fullwidth {
+	width:100%;
+}
+
+.fullwidth.separator {
+	position:relative;
+	margin:105px 0 0 0;
+}
+
+.fullwidth.separator:before {
+	position:absolute;
+	top:-52px;
+	left:0;
+	width:100%;
+	height:1px;
+	background:#db2a64;
+	content:"";
+	display:block;
+}
+
+.fullwidth.header-wrapper {
+	background:#db2a64;
+}
+
+.page-container {
+	width:990px;
+	margin:0 auto;
+}
+
+#header {
+	position:relative;
+	width:100%;
+	height:400px;
+}
+
+#teaser {
+	position:absolute;
+	top:48px;
+	left:72px;
+	width:700px;
+}
+
+#teaser h1 {
+	color:#db2a64;
+	background:#490b22;
+	padding-left:10px;
+	padding-right:10px;
+	margin:0;
+	line-height:120px;
+	display:inline-block;
+}
+
+#teaser h1 span {
+	font-weight:400;
+}
+
+#teaser h2 {
+	color:#ffffff;
+	background:#a11147;
+	padding-left:10px;
+	padding-right:10px;
+	margin-bottom:60px;
+	display:inline-block;
+}
+
+#content {
+	background:#ffffff;
+}
+
+.button {
+	position:relative;
+	width:280px;
+	height:82px;
+	background-color:#ffffff;
+	font-size:24px;
+	font-weight:400;
+	color:#db2a64;
+	text-transform:uppercase;
+	text-align:center;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.button-download:hover {
+	color:#db2a64;
+	background:#490b22;
+	transform:scale(1.1, 1.1);
+	-webkit-transform:scale(1.1, 1.1);
+}
+
+.block {
+	width:700px;
+	margin-left:72px;
+}
+
+.block-head {
+	margin-bottom:20px;
+	text-transform:uppercase;
+}
+
+.block-passage {
+	margin-top:40px;
+}
+
+pre,
+span.pre {
+	font-family:Consolas, "Courier New", Courier, monospace;
+}
+
+pre span {
+	color:#db2a64;
+}
+
+pre span.alt {
+	color:#a11147;
+}
+
+.cursor {
+	cursor:default;
+}
+
+.footer {
+	margin-top:50px;
+	padding:30px 0;
+	color:#61595b;
+	background:#ecdde3;
+}
+
+/*
+ * ------------------------------------------------------------------------------------------ Media Queries
+ */
+@media (max-width:1020px) {
+	#teaser {
+		left:30px;
+	}
+
+	.page-container {
+		width:760px;
+	}
+
+	.block {
+		margin-left:30px;
+	}
+}
+
+@media (max-width:767px) {
+	ul.list {
+		padding:0 40px 20px 40px;
+	}
+
+	.fullwidth.large {
+		min-height:790px;
+	}
+	
+	#teaser {
+		width:520px;
+	}
+
+	.fullwidth.compact #header:before {
+		display:none;
+	}
+
+	.fullwidth.compact #header {
+		height:393px;
+	}
+
+	body.has-customscrollbar .button-download {
+		margin-right:23px;
+	}
+
+	body.has-customscrollbar-firefox .button-download {
+		margin-right:5px;
+	}
+
+	.fullwidth {
+		float:left;
+	}
+
+	.page-container,
+	.block {
+		width:100%;
+	}
+
+	.block {
+		padding-right:0;
+		margin-left:0;
+	}
+
+	.block h2,
+	.block h3,
+	.block h4 {
+		margin-left:20px;
+		padding-right:40px;
+	}
+
+	.block p {
+		margin-left:20px;
+	}
+
+	.block .block-head,
+	.block p {
+		padding-right:20px;
+	}
+
+	pre {
+		font-size:16px;
+		margin-left:20px;
+	}
+
+	body.has-customscrollbar .block .block-head,
+	body.has-customscrollbar .block p {
+		padding-right:40px;
+	}
+
+	body.has-customscrollbar-firefox .block .block-head,
+	body.has-customscrollbar-firefox .block p {
+		padding-right:23px;
+	}
+
+	.footer p {
+		padding-right:40px;
+	}
+}
+
+@media (max-width:570px) {
+	#teaser {
+		width:420px;
+	}
+	
+	pre {
+		margin-right:20px;
+		font-size:15px;
+		word-break: break-all;
+		word-wrap: break-word;
+		white-space: pre-wrap;
+	}
+}
+
+@media (max-width:470px) {
+	#teaser {
+		width:250px;
+	}
+	
+	#teaser h1 {
+		font-size:56px;
+		line-height:86px;
+		clear:both;
+		float:left;
+	}
+	
+	#teaser h2 {
+		width:200px;
+		padding-top:5px;
+		padding-bottom:5px;
+		font-size:16px;
+		line-height:22px;
+		clear:both;
+		float:left;
+	}
+	
+	.button-download {
+		width:180px;
+		height:40px;
+		padding-top:20px;
+		padding-bottom:10px;
+		float:left;
+		clear:both;
+	}
+	
+	pre {
+		font-size:14px;
+	}
+}
+
+@media (max-width:330px) {
+	.footer p {
+		font-size:14px;
+	}
+}
