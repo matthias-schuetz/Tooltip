@@ -41,7 +41,7 @@ h1 {
 }
 
 h2 {
-	font-size:22px;
+	font-size:26px;
 	line-height:40px;
 }
 
@@ -148,6 +148,7 @@ ul.list li {
 #teaser h2 {
 	color:#ffffff;
 	background:#a11147;
+	font-size:22px;
 	padding-left:10px;
 	padding-right:10px;
 	margin-bottom:60px;
