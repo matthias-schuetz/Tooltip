@@ -197,6 +197,7 @@ ul.list li {
 pre,
 span.pre {
 	font-family:Consolas, "Courier New", Courier, monospace;
+	white-space:pre-wrap;
 }
 
 pre span {
