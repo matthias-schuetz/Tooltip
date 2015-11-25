@@ -244,7 +244,7 @@ pre span.alt {
 	.fullwidth.large {
 		min-height:790px;
 	}
-	
+
 	#teaser {
 		width:520px;
 	}
@@ -319,7 +319,7 @@ pre span.alt {
 	#teaser {
 		width:420px;
 	}
-	
+
 	pre {
 		margin-right:20px;
 		font-size:15px;
@@ -333,14 +333,14 @@ pre span.alt {
 	#teaser {
 		width:250px;
 	}
-	
+
 	#teaser h1 {
 		font-size:56px;
 		line-height:86px;
 		clear:both;
 		float:left;
 	}
-	
+
 	#teaser h2 {
 		width:200px;
 		padding-top:5px;
@@ -350,7 +350,7 @@ pre span.alt {
 		clear:both;
 		float:left;
 	}
-	
+
 	.button-download {
 		width:180px;
 		height:40px;
@@ -359,7 +359,7 @@ pre span.alt {
 		float:left;
 		clear:both;
 	}
-	
+
 	pre {
 		font-size:14px;
 	}
