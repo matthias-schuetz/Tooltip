@@ -47,13 +47,19 @@ This would set the tooltip offset (relative to the mouse cursor) to 10 pixels fo
 
 ### JavaScript
 
-In addition you may set the default options which contain values for tooltipId and offsetDefault. This will affect all tooltips on the page. You can do this by using the following code:
+In addition you can call some additional methods which are globally available. You may set the default options which contain values for tooltipId and offsetDefault. This will affect all tooltips on the page. You can do this by using the following code:
 
 ```javascript
 tooltip.setOptions({
 	tooltipId: "example",
 	offsetDefault: 20
 });
+```
+
+Furthermore you can refresh all tooltips on a page with one call. This is required if you add tooltip elements dynamically (via Ajax) or update their options/text afterwards. Simply call this method to rebuild all tooltips.
+
+```javascript
+tooltip.refresh();
 ```
 
 ### CSS
