@@ -7,4 +7,9 @@
 	background:#DB2A64;
 	color:#ffffff;
 	padding:8px;
+	z-index:999;
+}
+
+#tooltip.alt-tooltip {
+	background:#490B22;
 }

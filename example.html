@@ -43,7 +43,7 @@
 								<span data-tooltip title="I'm a tooltip text" class="cursor">Tooltip demo 1 (hover here)</span>
 							</p>
 							<p>
-								<span data-tooltip="{ 'offset': 30 }" title="I'm another tooltip text" class="cursor">Tooltip demo 2 (hover here)</span>
+								<span data-tooltip="{ 'offset': 30, 'class': 'alt-tooltip' }" title="I'm another tooltip text" class="cursor">Tooltip demo 2 (hover here)</span>
 							</p>
 						</div>
 					</div>
@@ -56,7 +56,7 @@
 							<ul class="list">
 								<li>Configuration via HTML and data attributes</li>
 								<li>Customizable via CSS</li>
-								<li>Extensible (JavaScript code is about 100 lines)</li>
+								<li>Extensible (JavaScript code is about 150 lines)</li>
 								<li>Runs in all major browsers and Internet Explorer 9+</li>
 								<li>No external dependencies</li>
 							</ul>
@@ -71,9 +71,9 @@
 							<p>After <a href="https://github.com/matthias-schuetz/Tooltip">downloading the package</a> from GitHub, you just need to include the JavaScript file in the HTML code of your site. That's it. Any further configuration is optional. From this point, when the HTML page has been loaded, all elements having the <span class="pre">data</span> attribute "data-tooltip" will be processed and provided with the tooltip functionality. The tooltip text comes from an additional <span class="pre">title</span> attribute. A sample element looks like this:</p>
 							<pre>
 &lt;div <span>data-tooltip</span> <span>title</span>=<span class="alt">"I'm a tooltip text"</span>&gt;Demo&lt;/div&gt;</pre>
-							<p>You can also specify a custom offset for each tooltip by using a JSON option string:</p>
+							<p>You can also specify additional options to define a custom offset or a CSS class for each tooltip by using a JSON option string:</p>
 							<pre>
-&lt;div <span>data-tooltip=<span class="alt">"{ 'offset': 10 }"</span></span> <span>title</span>=<span class="alt">"I'm a tooltip text"</span>&gt;Demo&lt;/div&gt;</pre>
+&lt;div <span>data-tooltip=<span class="alt">"{ 'offset': 10, 'class': 'alt-tooltip' }"</span></span> <span>title</span>=<span class="alt">"I'm a tooltip text"</span>&gt;Demo&lt;/div&gt;</pre>
 							<p>This would set the tooltip offset (relative to the mouse cursor) to 10 pixels for this element. It has to be said that this is a very basic implementation of parsing a JSON option string. So you'll have to use the single quotes for attributes in order to make <span class="pre">JSON.parse</span> work. If you want to omit the single quotes you could use a library like the <a href="https://github.com/politician/relaxed-json-parser">relaxed JSON parser</a>.</p>
 							<p>In addition you may set the default options which contain values for <em>tooltipId</em> and <em>offsetDefault</em>. This will affect all tooltips on the page. You can do this by using the following code:</p>
 							<pre>

@@ -66,9 +66,14 @@
 		}
 	}
 
-	function _createTooltip(text) {
+	function _createTooltip(text, tooltipId) {
 		var tooltipElm = document.createElement("div");
 		var tooltipText = document.createTextNode(text);
+		var options = tooltipId && _tooltips[tooltipId] && _tooltips[tooltipId].options;
+
+		if (options && options["class"]) {
+			tooltipElm.setAttribute("class", options["class"]);
+		}
 
 		tooltipElm.setAttribute("id", _options.tooltipId);
 		tooltipElm.appendChild(tooltipText);
@@ -112,7 +117,7 @@
 		var tooltipText = tooltipId && _tooltips[tooltipId] && _tooltips[tooltipId].text;
 
 		if (tooltipText) {
-			_createTooltip(tooltipText);	
+			_createTooltip(tooltipText, tooltipId);	
 		}
 	}
 

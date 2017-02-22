@@ -37,10 +37,10 @@ You just need to include the JavaScript file in the HTML code of your site. That
 </html>
 ```
 
-You can also specify a custom offset for each tooltip by using a JSON option string:
+You can also specify additional options to define a custom offset or a CSS class for each tooltip by using a JSON option string:
 
 ```html
-<div data-tooltip="{ 'offset': 10 }" title="I'm a tooltip text">Demo</div>
+<div data-tooltip="{ 'offset': 10, 'class': 'alt-tooltip' }" title="I'm a tooltip text">Demo</div>
 ```
 
 This would set the tooltip offset (relative to the mouse cursor) to 10 pixels for this element. It has to be said that this is a very basic implementation of parsing a JSON option string. So you'll have to use the single quotes for attributes in order to make JSON.parse work.
