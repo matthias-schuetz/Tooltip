@@ -31,7 +31,7 @@
 		}
 
 		Array.prototype.forEach.call(document.querySelectorAll("[data-tooltip]"), function(elm, idx) {
-			var tooltipText = elm.getAttribute("title").trim();
+			var tooltipText = (elm.getAttribute("title") || "").trim();
 			var options;
 
 			if (resetTooltips && _tooltipsTemp.length && _tooltipsTemp[idx] && _tooltipsTemp[idx].text) {
