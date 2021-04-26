@@ -27,13 +27,13 @@ You just need to include the JavaScript file in the HTML code of your site. That
 
 ```html
 <html>
-	<head>
-    	<script src="Tooltip.js" type="text/javascript"></script>
-    </head>
+  <head>
+    <script src="Tooltip.js" type="text/javascript"></script>
+  </head>
 
-	<body>
-    	<div data-tooltip title="I'm a tooltip text">Demo</div>
-    </body>
+  <body>
+    <div data-tooltip title="I'm a tooltip text">Demo</div>
+  </body>
 </html>
 ```
 
