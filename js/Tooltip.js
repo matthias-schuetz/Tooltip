@@ -72,7 +72,9 @@
 		var options = tooltipId && _tooltips[tooltipId] && _tooltips[tooltipId].options;
 
 		if (options && options["class"]) {
-			tooltipElm.setAttribute("class", options["class"]);
+			tooltipElm.setAttribute("class", 'tooltip-js ' + options["class"]);
+		} else {
+			tooltipElm.setAttribute("class", 'tooltip-js');
 		}
 
 		tooltipElm.setAttribute("id", _options.tooltipId);
