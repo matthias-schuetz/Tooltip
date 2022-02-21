@@ -17,7 +17,7 @@ Here are some key facts that should provide a short overview of what Tooltip.js 
 So the script is very basic and can be extended with various features. It's meant to be a learning example of how a tooltip functionality can be realized by using data attributes and parsing JSON string options.
 
 ## Demo
-You can check the <a href="http://matthias-schuetz.github.com/tooltip.js">example.html</a> that is included in this package. This is also the website of Tooltip.js.
+You can check the <a href="http://matthias-schuetz.github.io/tooltip.js">example.html</a> that is included in this package. This is also the website of Tooltip.js.
 
 ## Usage
 
